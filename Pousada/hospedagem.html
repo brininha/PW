@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" >
+    <!-- Meu CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/icons/favicon.ico">
+    <title>Reservar</title>
+</head>
+<body>
+    
+    <!-- Este é o script de chamada do bootstrap -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+
+    <!-- Este é o cabeçalho -->
+    <header>
+
+    <!-- Este é o logo e nome da pousada -->
+    <img class="cabeca" src="images/cabecalho02.png">
+
+    <!-- Este é o menu de navegação -->
+    <ul class="menu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="galeria.html">GALERIA</a></li>
+        <li><a href="suites.html">NOSSAS SUÍTES</a></li>
+        <li><a href="hospedagem.html">RESERVAR</a></li>
+    </ul>
+    
+    </header>
+
+    <main class="hospedagem">
+        
+        <!-- Início do formulário -->
+        <div id="formularioArea">
+            <div class="container">
+
+                <div data-aos="fade-up">
+                    <div class="jumbotron text-center">
+                        <p class="h2">Registro</p>
+                        <p class="lead">
+                            Preencha os campos abaixo para prosseguir com a reserva.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Campo de seleção -->
+                <div data-aos="fade-up">
+                    <form name="reservaForm" class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Acomodação:</label>
+                            <select name="codQuarto" id="codQuarto" class="form-select">
+                                <option value="0">Selecione...</option>
+                                <option value="1">Suíte Coral</option>
+                                <option value="2">Suíte Conchas</option>
+                                <option value="3">Suíte Mar</option>
+                                <option value="4">Suíte Algas</option>
+                                <option value="5">Suíte Pérolas</option>
+                            </select>
+                        </div>
+        
+                        <!-- Campo de entrada de texto -->
+                        <div class="col-md-6">
+                            <label class="form-label">Número de diárias:</label>
+                            <input class="form-control" type="text" id="codDias" name="codDias" size="1" required>
+                        </div>
+                        
+                        <!-- Outro campo de seleção -->
+                        <div class="col-md-6">
+                            <label class="form-label">Quantidade de adultos:</label>
+                            <select name="codAdulto" id="codAdulto" class="form-select">
+                                <option value="1">1 adulto</option>
+                                <option value="2">2 adultos</option>
+                                <option value="3">3 adultos</option>
+                                <option value="4">4 adultos</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Mais um campo de seleção -->
+                        <div class="col-md-6">
+                            <label class="form-label">Quantidade de crianças:</label>
+                            <select name="codCrianca" id="codCrianca" class="form-select">
+                                <option value="0">Nenhuma criança</option>
+                                <option value="1">1 criança</option>
+                                <option value="2">2 crianças</option>
+                                <option value="3">3 crianças</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Outro campo de entrada de texto -->
+                        <div class="col-md-6">
+                            <label class="form-label">Código promocional:</label>
+                            <input type="text" id="desconto" name="desconto" class="form-control">
+                        </div>
+                        
+                        <!-- Mais um campo de entrada de texto -->
+                        <div class="col-md-6">
+                            <label class="form-label">Nome:</label>
+                            <input type="text" id="nome" name="nome" class="form-control" required>
+                        </div>
+    
+                        <!-- Campo de caixas de seleção -->
+                        <div class="col-md-12">
+                            <input type="checkbox" name="extra1" id="extra1" value="pets" class="form-check-input">
+                            <label class="form-check-label">Pets</label>
+                            <input type="checkbox" name="extra2" id="extra2" value="caixinha" class="form-check-input">
+                            <label class="form-check-label">Caixinha de natal</label>
+                        </div>
+    
+                        <!-- Botão de submeter -->
+                        <div class="col-12">
+                            <button type="submit" onclick="testar()" class="btn btn-light">Continuar</button>
+                        </div>
+                    </form>
+                </div>
+                <img src="images/lacuna.png" width="20px">
+
+            </div>
+        </div>
+
+        <!-- Espaço destinado à mensagem que é gerada pelo JS -->
+        <div id="dadosArea">
+        </div>
+
+        <br>
+
+    </main>
+
+    <!-- Este é o rodapé -->
+    <footer>
+      
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+                <img src="images/endereco.png">
+            </div>
+            <div class="col-6">
+                <img src="images/contato.png">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+                <p class="h6">Rua Peixe Palhaço, 321</p>
+                <p class="h6">Fundo do Mar - Oceano Atlântico</p>
+            </div>
+            <div class="col-6">
+                <p class="h6">(11) 99182-7248</p>
+                <p class="h6">(11) 95121-7908</p>
+            </div>
+          </div>
+        </div>
+        
+        <br>
+  
+    </footer>
+  
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  
+    <!-- jQuery JS -->
+    <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+  
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script> 
+
+    <!-- Form JS -->
+    <script src="js/hospedagem.js"></script>
+
+</body>
+</html>
